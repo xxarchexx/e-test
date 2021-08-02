@@ -1,0 +1,74 @@
+.wishlist--container ul li {
+  padding: 1rem;
+  border-top: 1px solid rgba(153, 153, 153, 0.548);
+}
+
+.wishlist-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.wishlist-item .btn-remove {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  background: none;
+  border: none;
+}
+
+.wishlist-item .btn-remove:hover {
+  opacity: 1;
+}
+
+.wishlist-item .btn-remove:before,
+.wishlist-item .btn-remove:after {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: rgb(255, 0, 0);
+}
+
+.wishlist-item .btn-remove:before {
+  transform: rotate(45deg);
+}
+
+.wishlist-item .btn-remove:after {
+  transform: rotate(-45deg);
+}
+
+.wishlist-item .book-title h2 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  color: #3b3b3b;
+}
+
+.wishlist-item .book-title span {
+  font-size: 0.7rem;
+  font-style: italic;
+  padding-left: 0.5rem;
+  color: rgb(66, 66, 66);
+}
+
+.wishlist-item .book-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.wishlist-item .book-image img {
+  height: 100px;
+  width: 80px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}

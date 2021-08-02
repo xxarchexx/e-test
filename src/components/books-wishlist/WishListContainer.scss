@@ -1,0 +1,29 @@
+.wishlist--container {
+    margin: 0;
+    max-width: calc(20% - 2rem);
+    width: calc(20% - 2rem);
+    height: 100vh;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    overflow-y: auto;
+    background-color: #ffffff;
+    padding-bottom:30%;
+}
+
+@media only screen and (max-width: 768px) {  
+    .wishlist--container {
+        padding: 10px;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+        background-color: #ffffff;
+        padding-bottom: 0;
+    }
+
+    .wishlist--container .wishlist-item .book-title h2 {
+        margin-left: 1rem;
+    }
+}

@@ -1,0 +1,11 @@
+.search-book{
+    width : 70%;
+    background-color: whitesmoke;
+}
+
+.books-result{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    flex-direction: row;
+}
