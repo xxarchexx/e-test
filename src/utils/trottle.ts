@@ -1,14 +1,14 @@
 export function throttle(fn: any, ms: number): ()=>void {
   let isThrottle: boolean = false;
-  let context: any;
-  let args: any;
+  let saveThis: any;
+  let saveArgs: any;
   let _this: any;
   
   return function wrapper() {
     if (isThrottle) {
-      args = arguments;
+      saveArgs = arguments;
       //@ts-ignore
-      context = this;
+      saveThis = this;
       return;
     }
 
@@ -17,8 +17,9 @@ export function throttle(fn: any, ms: number): ()=>void {
 
     setTimeout(function () {
       isThrottle = false;
-      if (args) {
-        wrapper.apply(context, args);
+      if (saveThis) {
+        wrapper.apply(saveThis, saveArgs);
+        saveThis = null;
       }
     }, ms);
   };
