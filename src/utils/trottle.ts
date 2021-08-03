@@ -2,7 +2,7 @@ export function throttle(fn: any, ms: number): ()=>void {
   let isThrottle: boolean = false;
   let saveThis: any;
   let saveArgs: any;
-
+  let _this: any;
   
   return function wrapper() {
     if (isThrottle) {
